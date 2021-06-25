@@ -1,13 +1,15 @@
+
+let startBtn = document.querySelector(".btnStart").addEventListener("click", function(){
 // value cards
 const cards = [
-"2", "3", "4", "5", "6", "7", "8", "9", "10",
-"2", "3", "4", "5", "6", "7", "8", "9", "10",
-"2", "3", "4", "5", "6", "7", "8", "9", "10",
-"2", "3", "4", "5", "6", "7", "8", "9", "10",
-"J", "Q", "K", "A",
-"J", "Q", "K", "A",
-"J", "Q", "K", "A",
-"J", "Q", "K", "A"
+    "2", "3", "4", "5", "6", "7", "8", "9", "10",
+    "2", "3", "4", "5", "6", "7", "8", "9", "10",
+    "2", "3", "4", "5", "6", "7", "8", "9", "10",
+    "2", "3", "4", "5", "6", "7", "8", "9", "10",
+    "J", "Q", "K", "A",
+    "J", "Q", "K", "A",
+    "J", "Q", "K", "A",
+    "J", "Q", "K", "A"
 ];
 const deck = new Array();
 
@@ -37,17 +39,23 @@ function drawRandomCard(cards){
 console.log(drawRandomCard(cards));
 
 // start game
-let drawYou = drawRandomCard(cards);
-let drawHouse = drawRandomCard(cards);
 
+function playCards(){
+    let drawYou = drawRandomCard(cards);
+    let drawHouse = drawRandomCard(cards);
+}
 
 
 // Hit me
-function hit(){
+document.querySelector(".hit").addEventListener("click", function(){
+    drawYou.push(drawRandomCard(cards));
 
+});
 
-}
-console.log("Hit me");
+document.querySelector(".stop").addEventListener("click", function(){
+    
+
+});
 
 // Stop and calculate winner
 function stop(){
@@ -57,4 +65,12 @@ console.log("stop");
 
 // score card
 
-// New set of cards - restart (deal)
+function incrementScore(score) {
+    score.innerText = parseInt(score.innerText) + 1
+
+};
+
+
+// when you click stop play again button appears
+
+});
